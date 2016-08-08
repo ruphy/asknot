@@ -10,8 +10,8 @@
   <script type="text/javascript" src="foopy.js"></script>
   <script type="text/javascript" src="l10n.js"></script>
   <link rel="resource" type="application/l10n" href="locales.ini" />
-  <link href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet"/>
-  <title>What can I do for Mozilla</title>
+  <!-- <link href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet"/> -->
+  <title>What can I do for WikiToLearn</title>
   <!-- #responses div elements has display:none by default in case if js is disabled -->
   <script>
     $(document).ready(function() {
@@ -19,52 +19,17 @@
     });
   </script>
   <!-- end of manipulation if js is disabled -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-35433268-58', 'whatcanidoformozilla.org');
-    ga('send', 'pageview');
-  </script>
 </head>
 <body>
 
-  <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+  <!-- <a href="http://www.mozilla.org/" id="tabzilla">WikiToLearn</a> -->
   <div id="lang">
     <span id="lang-selection" data-l10n-id="lang-selection">Language:</span>
     <select>
-      <option value='ar'>عربي | Arabic</option>
-      <option value='bn-BD'>বাংলা‬ (বাংলাদেশ) | Bengali (Bangladesh)</option>
-      <option value='bn-IN'>বাংলা (ভারত) | Bengali (India)</option>
-      <option value='de'>‪Deutsch | German</option>
       <option selected value='en'>English</option>
       <option value='es'>Español | Spanish</option>
-      <option value='fa'>‫فارسی‬ | ‪Persian</option>
-      <option value='fr'>français‬ | ‪French‬</option>
-      <option value='el'>Έλληνες | Greek</option>
-      <option value='gu-IN'>ગુજરાતી | Gujarati</option>
-      <option value='hi-IN'>हिंदी‬ | ‪Hindi‬</option>
-      <option value='id'>Indonesian</option>
       <option value='it'>Italiano‬ | ‪Italian</option>
-      <option value='ko'>‪한국어‬ | ‪Korean‬</option>
-      <option value='lv'>Latviešu‬ | ‪Latvian</option>
-      <option value='ml-IN'>Malayalam</option>
-      <option value='ne-NP'>नेपाली | Nepali</option>
-      <option value='nl'>Nederlands | Dutch</option>
-      <option value='pl'>‪Polski‬ | ‪Polish‬</option>
-      <option value='pt-BR'>‪Português | Portuguese (Brasil)</option>
-      <option value='pt-PT'>‪Português‬ | Portuguese (‪Portugal)</option>
-      <option value='ro'>Română‬ | ‪Romanian</option>
-      <option value='ru-RU'>Русский‬ | ‪Russian‬</option>
-      <option value='sq'>‪shqipe‬ | ‪Albanian</option>
-      <option value='sv-SE'>Svenska‬ | ‪Swedish</option>
-      <option value='te'>తెలుగు | Telugu</option>
-      <option value='tr'>‪Türkçe‬ | ‪Turkish</option>
-      <option value='ua'>‪Українська‬ | ‪Ukrainian</option>
-      <option value='zh-CN'>中文 (中国)‬ | ‪Chinese (China)</option>
-      <option value='zh-TW'>‪中文 (台灣)‬ | ‪Chinese (Taiwan)</option>
     </select>
   </div>
 
@@ -73,7 +38,7 @@
       <span class="question" data-l10n-id="progquestion"></span>
       <ul class="choices">
         <li next-group="proglang"><span data-l10n-id="writecode"></span></li>
-        <li next-group="softtest"><span data-l10n-id="testsoftware"></span></li>
+        <li next-group="editors"><span data-l10n-id="editing"></span></li>
         <li next-group="support"><span data-l10n-id="usersupport"></span></li>
         <li next-group="translate"><span data-l10n-id="translation"></span></li>
         <li next-group="advocate"><span data-l10n-id="advocacy"></span></li>
@@ -82,26 +47,23 @@
       </ul>
     </div>
 
-    <div class="group" id="softtest">
-      <span class="question" data-l10n-id="qa-intro"></span>
+    <div class="group" id="editors">
+      <span class="question" data-l10n-id="editors-intro"></span>
       <ul class="choices">
-        <li target="https://quality.mozilla.org/teams/web-qa/" data-choice-id="webqa">Web QA
-          <div class="extra" data-l10n-id="webqa-extra"></div>
+        <li target="https://meta.wikitolearn.org/Teams/Editors" data-choice-id="newcourse">
+          <span data-l10n-id="startnewcourse"></span>
+          <div class="extra" data-l10n-id="startnewcourse-extra"></div>
         </li>
-        <li target="https://quality.mozilla.org/teams/firefoxqe/" data-choice-id="ffqa">Firefox QA
+        <li target="https://quality.mozilla.org/teams/firefoxqe/" data-choice-id="review">
+          <span data-l10n-id="reviewcontent"></span>
           <div class="extra" data-l10n-id="ffqa-extra"></div>
         </li>
-        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="tbqa">Thunderbird QA
+        <li target="https://quality.mozilla.org/teams/thunderbird/" data-choice-id="import">
+          <span data-l10n-id="importexistingbook"></span>
           <div class="extra" data-l10n-id="thunderbirdqa-extra"></div>
         </li>
         <li target="https://oneanddone.mozilla.org/" data-choice-id="oneanddone">One and Done
           <div class="extra" data-l10n-id="oneanddone-extra"></div>
-        </li>
-        <li target="https://wiki.mozilla.org/QA/Community/Bug_Day" data-choice-id="bugday">Join a Bug Day
-          <div class="extra" data-l10n-id="ff-bugday-extra"></div>
-        </li>
-        <li target="https://nightly.mozilla.org/" data-choice-id="nightly">Use Firefox Nightly
-          <div class="extra" data-l10n-id="ff-nightly-extra"></div>
         </li>
       </ul>
     </div>
@@ -132,7 +94,7 @@
         </li>
       </ul>
     </div>
-    
+
     <div class="group" id="translate">
       <span class="question" data-l10n-id="translate-intro"></span>
       <ul class="choices">
@@ -469,8 +431,8 @@
     <div id="footer" data-l10n-id="credits"></div>
   </div>
   <footer>
-    <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
-    <script>window.Tabzilla || document.write('<script src="tabzilla.js"><\/script>')</script>
+    <!-- <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+    <script>window.Tabzilla || document.write('<script src="tabzilla.js"><\/script>')</script> -->
   </footer>
 </body>
 </html>
